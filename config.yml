@@ -1,6 +1,6 @@
 languageCode: en-us
-baseURL: "//gcortesi/"
-title: Giacomo Cortesi
+baseURL: "https://www.gcortesi.com"
+title: Giacomo Cortesi Personal Website
 paginate: 5
 theme: 
   - "hugo-embed-pdf-shortcode"
@@ -24,14 +24,17 @@ params:
   description: ""
   keywords: [Blog, Portfolio, Software Engineering]
   author: Giacomo Cortesi
-  # author: ["Me", "You"] # multiple authors
-  #images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
+  assets:
+    favicon: "/assets/favicons/favicon.ico"
+    favicon16x16: "/assets/favicons/favicon-16x16.png"
+    favicon32x32: "/assets/favicons/favicon-32x32.png"    
+
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
@@ -64,6 +67,8 @@ params:
     buttons:
       - name: Resume
         url: resume
+      - name: Projects
+        url: projects        
       - name: Blogs
         url: blogs
 
@@ -128,21 +133,7 @@ menu:
       name: Resume
       url: /resume/
       weight: 1
-    #- identifier: tags
-    #  name: tags
-    #  url: /tags/
-    #  weight: 4
-
-    #- identifier: example
-    #  name: example.org
-    #  url: https://example.org
-    #  weight: 30
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-# pygmentsUseClasses: true
-# markup:
-#     highlight:
-#         # anchorLineNos: true
-#         codeFences: true
-#         guessSyntax: true
-#         lineNos: true
-#         style: monokai
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 1

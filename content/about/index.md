@@ -14,7 +14,7 @@ showtoc: false
 draft: false
 ---
 
-Several years of experience in designing software.
+Several years of experience in designing full stack software.
 Especially focusing on:
  - microservices architectures
  - cloud-native applications development
