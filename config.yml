@@ -29,9 +29,13 @@ params:
   disableThemeToggle: false
 
   assets:
-    favicon: "/assets/favicons/favicon.ico"
-    favicon16x16: "/assets/favicons/favicon-16x16.png"
-    favicon32x32: "/assets/favicons/favicon-32x32.png"    
+    # no forward slash at beginning to preserve full baseURL:
+    # example: baseURL = http://gcortesi.com:1313/hugo-gc
+    # /assets/favicons/favicon.ico -> icon url in index.html becomes http://gcortesi.com:1313/assets/favicons/favicon.ico
+    # assets/favicons/favicon.ico -> icon url in index.html becomes http://gcortesi.com:1313/hugo-gc/assets/favicons/favicon.ico
+    favicon: "assets/favicons/favicon.ico"
+    favicon16x16: "assets/favicons/favicon-16x16.png"
+    favicon32x32: "assets/favicons/favicon-32x32.png"    
 
   ShowReadingTime: true
   ShowShareButtons: false
@@ -48,16 +52,17 @@ params:
 
   label:
     text: "Giacomo Cortesi"
-    icon: "images/coding.png"
+    icon: "images/dp.png"
     iconHeight: 35
 
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
     title: "\U0001F44B"
-    subtitle: "*What a chance*! Out of billions of web pages you just landed on **Giacomo Cortesi** personal website.  
-    **Hi**, I'm a 360° full stack software engineer.
+    subtitle: "*What a chance*! 
     
+    Out of billions of web pages you just landed on **Giacomo Cortesi** personal website.  
+    **Hi**, I'm a 360° full stack software engineer.
     
     Here you can learn more about me."
     imageUrl: "images/dp.png"
@@ -75,9 +80,10 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "\U0001F44B"
-    Content: "*What a chance*! Out of billions of web pages you just landed on **Giacomo Cortesi** personal website.
-    Hi, I'm a 360° full stack software engineer.  
+    Content: "*What a chance*! 
     
+    Out of billions of web pages you just landed on **Giacomo Cortesi** personal website.  
+    Hi, I'm a 360° full stack software engineer.  
     
     Here you can learn more about me."
 
@@ -124,16 +130,12 @@ menu:
     - identifier: about
       name: About
       url: /about/
-      weight: 4
     - identifier: blog
       name: Blogs
       url: /blogs/
-      weight: 1
     - identifier: resume
       name: Resume
       url: /resume/
-      weight: 1
     - identifier: projects
       name: Projects
       url: /projects/
-      weight: 1
